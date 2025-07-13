@@ -25,3 +25,4 @@ else:
     D = st.number_input("Data tokens D", 1e9, 1e14, 1e12, step=1e11, format="%.0f")
     C = st.number_input("Compute FLOPs C", 1e15, 1e23, 1e21, step=1e20, format="%.0f")
 df = pd.DataFrame({"params": [N], "data": [D], "compute": [C]})
+
