@@ -2,7 +2,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)  
-[![CI](https://github.com/<your-user>/neural-scaling-predictor/actions/workflows/ci.yml/badge.svg)](…)  
+[![CI](https://github.com/epaunova/Natural-Scaling-Predictor/actions/workflows/ci.yml/badge.svg)](https://github.com/epaunova/Natural-Scaling-Predictor/actions/workflows/ci.yml)
 [![Docs](https://img.shields.io/badge/docs-mkdocs--material-brightgreen)](https://<your-user>.github.io/neural-scaling-predictor)
 
 > **NSP** predicts Large-Language-Model performance *before* you waste GPU-weeks on brute-force training.  
