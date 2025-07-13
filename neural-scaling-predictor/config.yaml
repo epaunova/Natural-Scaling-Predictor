@@ -1,0 +1,51 @@
+# Neural Scaling Predictor Configuration
+
+model:
+  name: "nsp-base"
+  input_dim: 127
+  hidden_dim: 512
+  num_layers: 4
+  num_tasks: 12
+  dropout: 0.1
+  attention_heads: 8
+
+data:
+  num_tasks: 12
+  num_model_families: 15
+  total_models: 127
+  sequence_length: 1000
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+  batch_size: 32
+  num_workers: 4
+
+training:
+  epochs: 100
+  batch_size: 32
+  lr: 1e-4
+  weight_decay: 1e-5
+  warmup_steps: 1000
+  gradient_clip_norm: 1.0
+  save_every: 10
+  eval_every: 5
+  early_stopping_patience: 15
+
+optimization:
+  optimizer: "adamw"
+  scheduler: "cosine"
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1e-8
+
+logging:
+  wandb_project: "neural-scaling-predictor"
+  log_every: 100
+  save_dir: "models/"
+  tensorboard_dir: "logs/"
+
+evaluation:
+  metrics: ["mae", "rmse", "r2", "mape"]
+  confidence_intervals: true
+  uncertainty_estimation: true
+  emergence_detection: true
